@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_tipos_servicios_eventos",
+  "info": {
+    "displayName": "Evento",
+    "icon": "microphone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tarifas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tarifa.tarifas-custom"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicios_destinies",
+  "info": {
+    "singularName": "servicios-destiny",
+    "pluralName": "servicios-destinies",
+    "displayName": "Servicios-destiny",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titulo": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "moneda": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::monda.monda",
+      "inversedBy": "servicios_destinies"
+    },
+    "unidad": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::unidad.unidad",
+      "inversedBy": "servicios_destinies"
+    },
+    "ubiacion": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "customField": "plugin::location-field.location"
+    },
+    "tipos_servicio": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "tipos-servicios.concierto",
+        "tipos-servicios.evento",
+        "tipos-servicios.hotel",
+        "tipos-servicios.tour",
+        "tipos-servicios.transporte",
+        "tipos-servicios.viaje"
+      ],
+      "max": 1
+    },
+    "incluye": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "items.item-incluido"
+    },
+    "url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "categoria": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "intrepido",
+        "cultural",
+        "relajado",
+        "gastronomico"
+      ]
+    },
+    "descripcion": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "politicas": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": false
+    },
+    "minimo_apartado": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float",
+      "default": 200
+    },
+    "galeria": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_tarifa_tarifas_customs",
+  "info": {
+    "displayName": "Tarifas_custom",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "precio": {
+      "type": "float",
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Fechas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fechas.fechas"
+    }
+  }
+}

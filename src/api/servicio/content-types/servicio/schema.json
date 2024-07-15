@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicios",
+  "info": {
+    "singularName": "servicio",
+    "pluralName": "servicios",
+    "displayName": "Servicios-global",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "locacion": {
+      "type": "customField",
+      "customField": "plugin::location-field.location"
+    },
+    "unidad": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unidad.unidad",
+      "inversedBy": "servicios"
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "galeria": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "moneda": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::monda.monda",
+      "inversedBy": "servicios"
+    },
+    "preguntas_frecuentes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "preguntas-frecuentes.pregunta"
+    },
+    "incluido": {
+      "type": "component",
+      "repeatable": true,
+      "component": "items.item-incluido"
+    },
+    "Tipo_Servicio": {
+      "type": "dynamiczone",
+      "components": [
+        "tipos-servicios.hotel",
+        "tipos-servicios.tour",
+        "tipos-servicios.transporte",
+        "tipos-servicios.concierto",
+        "tipos-servicios.evento",
+        "tipos-servicios.viaje"
+      ],
+      "required": true,
+      "max": 1
+    },
+    "politicas": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo"
+    }
+  }
+}

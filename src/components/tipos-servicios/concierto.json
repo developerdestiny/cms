@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_tipos_servicios_conciertos",
+  "info": {
+    "displayName": "Concierto",
+    "icon": "music",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tarifas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tarifa.tarifas-custom"
+    }
+  }
+}

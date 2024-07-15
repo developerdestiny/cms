@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordenes_destinies",
+  "info": {
+    "singularName": "ordenes-destiny",
+    "pluralName": "ordenes-destinies",
+    "displayName": "Reservas-destiny",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "paquete": {
+      "type": "json"
+    },
+    "plataforma_pago": {
+      "type": "string"
+    },
+    "estatus_pago": {
+      "type": "string"
+    },
+    "usuario": {
+      "type": "string"
+    },
+    "correo": {
+      "type": "text"
+    },
+    "estatus": {
+      "type": "enumeration",
+      "enum": [
+        "proceso",
+        "realizada"
+      ],
+      "required": false,
+      "default": "proceso"
+    }
+  }
+}

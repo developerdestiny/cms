@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_servicios",
+  "info": {
+    "singularName": "tipo-servicio",
+    "pluralName": "tipo-servicios",
+    "displayName": "tipo servicio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    }
+  }
+}
